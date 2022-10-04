@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PMDM_Practica2_LogIn</string>
+    <string name="login">Iniciar sesion</string>
 </resources>

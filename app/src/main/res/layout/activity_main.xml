@@ -7,21 +7,58 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        android:padding="70dp"
+        android:background="@color/homosexualBlue">
 
-        
-
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/etUserInput"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:drawableLeft="@drawable/user"
+            android:layout_marginTop="90dp"
+            android:hint="   Email"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/etPasswdInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/password"
+            android:hint="   Contraseña"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <Button
+                    android:id="@+id/btnRestar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:width="2dp"
+                    android:text="@string/login"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/azulOscuro"
+                    android:textSize="12dp"/>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
 </layout>
