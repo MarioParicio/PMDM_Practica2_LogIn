@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Bienvenido: "
             android:gravity="center"
+            android:textSize="17dp"
             />
 
 

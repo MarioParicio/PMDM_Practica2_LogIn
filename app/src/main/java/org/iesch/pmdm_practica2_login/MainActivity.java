@@ -1,6 +1,8 @@
 package org.iesch.pmdm_practica2_login;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AlertDialogLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (validarDatos()){
 
-            User user = new User(binding.etUserInput.toString(), binding.etPasswdInput.toString());
+            User user = new User(binding.etUserInput.getText().toString(), binding.etPasswdInput.getText().toString());
             Intent goDetail = new Intent(this, DetailActivity.class);
             goDetail.putExtra("User", user);
 
@@ -42,9 +44,12 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean validarDatos() {
         Log.i("infoMain", "Entrar en funcion validarDatos");
-
-
-        Log.i("infoMain", "datos correctos");
-        return true;
+        if (binding.etUserInput.getText().length() >= 1 && binding.etPasswdInput.getText().length() >= 1){
+            Log.i("infoMain", "datos correctos");
+            return true;
+        }
+        Log.i("infoMain", "datos incorrectos");
+        //F
+        return false;
     }
 }
